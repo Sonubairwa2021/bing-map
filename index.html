@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bing Maps Example</title>
+
+
+    <script type="text/javascript" src="https://www.bing.com/api/maps/mapcontrol?key=AoY0JE5ocJeqURGbPHPIoNfRy7JP7YcVDVzqfqDlOvURSFqcJGCtZScr1YzZxOmO"></script>
+</head>
+<body>
+    <div id="myMap" style="width: 100%; height: 600px;"></div>
+
+    <script>
+
+        
+
+
+
+   var map;
+
+function loadMapScenario() {
+    map = new Microsoft.Maps.Map(document.getElementById('myMap'), {
+        credentials: 'AoY0JE5ocJeqURGbPHPIoNfRy7JP7YcVDVzqfqDlOvURSFqcJGCtZScr1YzZxOmO'
+    });
+
+    var center = new Microsoft.Maps.Location(25.3407, 74.6313);  // Example coordinates for San Francisco, CA
+        var pin = new Microsoft.Maps.Pushpin(center, {
+            title: 'Project',
+            subTitle: 'P1545 - Test'
+        });
+        map.entities.push(pin);
+
+
+
+        var locations = [
+            { latitude: 37.7749, longitude: -122.4194 },  // San Francisco, CA
+            { latitude: 34.0522, longitude: -118.2437 },  // Los Angeles, CA
+            { latitude: 40.7128, longitude: -74.0060 },   // New York City, NY
+        ];
+
+         
+
+        // Create and add pushpins for each location
+        for (var i = 0; i < locations.length; i++) {
+            var location = new Microsoft.Maps.Location(locations[i].latitude, locations[i].longitude);
+
+            var pinOptions = {
+               // icon: 'https://png.pngtree.com/element_our/png/20181227/marker-line-black-icon-png_287178.jpg',  // URL of your custom icon
+                anchor: new Microsoft.Maps.Point(12, 36),  // Adjust anchor position if needed
+                title: 'Marker Title ' + (i + 1),
+                subTitle: 'Marker Subtitle ' + (i + 1),
+            };
+            var pin = new Microsoft.Maps.Pushpin(location, pinOptions);
+            map.entities.push(pin);
+
+        }
+        
+
+        // Focus the camera on the specified location
+        map.setView({ center: center, zoom: 8 }); 
+}
+
+
+loadMapScenario();
+
+    </script>
+
+    <script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?callback=loadMapScenario' async defer></script>
+</body>
+</html>

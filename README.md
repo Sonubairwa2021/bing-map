@@ -14,7 +14,7 @@ This project demonstrates how to integrate Bing Maps into a web application to d
 
 ## Installation
 
-1. Clone this repository: `git clone https://github.com/yourusername/your-repo.git`
+1. Clone this repository: `git clone https://github.com/Sonubairwa2021/bing-map.git`
 2. Navigate to the project directory: `cd your-repo`
 3. Obtain a Bing Maps API key by following [these instructions](https://docs.microsoft.com/en-us/bingmaps/getting-started/bing-maps-dev-center-help/getting-a-bing-maps-key).
 4. Open `index.html` in a text editor.

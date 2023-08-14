@@ -4,7 +4,7 @@
     <title>Bing Maps Example</title>
 
 
-    <script type="text/javascript" src="https://www.bing.com/api/maps/mapcontrol?key=AoY0JE5ocJeqURGbPHPIoNfRy7JP7YcVDVzqfqDlOvURSFqcJGCtZScr1YzZxOmO"></script>
+    <script type="text/javascript" src="https://www.bing.com/api/maps/mapcontrol?key=YOUR_API_KEY"></script>
 </head>
 <body>
     <div id="myMap" style="width: 100%; height: 600px;"></div>
@@ -19,7 +19,7 @@
 
 function loadMapScenario() {
     map = new Microsoft.Maps.Map(document.getElementById('myMap'), {
-        credentials: 'AoY0JE5ocJeqURGbPHPIoNfRy7JP7YcVDVzqfqDlOvURSFqcJGCtZScr1YzZxOmO'
+        credentials: 'YOUR_API_KEY'
     });
 
     var center = new Microsoft.Maps.Location(25.3407, 74.6313);  // Example coordinates for San Francisco, CA

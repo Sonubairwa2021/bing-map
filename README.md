@@ -44,6 +44,10 @@ Please note that the exact steps might vary based on the Bing Maps Dev Center's 
 - Click on the markers to view marker information.
 - Customize the locations and marker icons in the `index.html` file.
 
+## Screenshot
+
+![Screenshot](Screenshot.png)
+
 ## Credits
 
 - [Bing Maps API](https://www.bing.com/maps/)

@@ -24,6 +24,7 @@ function loadMapScenario() {
 
     var center = new Microsoft.Maps.Location(25.3407, 74.6313);  // Example coordinates for San Francisco, CA
         var pin = new Microsoft.Maps.Pushpin(center, {
+            icon: 'https://i.ibb.co/j8JYrNj/marker.png',
             title: 'Project',
             subTitle: 'P1545 - Test'
         });
@@ -44,7 +45,7 @@ function loadMapScenario() {
             var location = new Microsoft.Maps.Location(locations[i].latitude, locations[i].longitude);
 
             var pinOptions = {
-               // icon: 'https://png.pngtree.com/element_our/png/20181227/marker-line-black-icon-png_287178.jpg',  // URL of your custom icon
+               icon: 'https://i.ibb.co/j8JYrNj/marker.png',  // URL of your custom icon
                 anchor: new Microsoft.Maps.Point(12, 36),  // Adjust anchor position if needed
                 title: 'Marker Title ' + (i + 1),
                 subTitle: 'Marker Subtitle ' + (i + 1),
